@@ -1,14 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-        <title>Hello</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>NutriBuilder</title>
     </head>
     <body>
         <div id="app"></div>
-        {% load static %}
+        <script src="http://localhost:9000/bundle.js"></script>
         <script src="{% static 'js/bundle.js' %}"></script>
     </body>
 </html>

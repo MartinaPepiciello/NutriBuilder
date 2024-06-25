@@ -1,13 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; // Updated import
+import { StrictMode } from 'react';
+import '../css/styles.css';
 
 function App() {
-    const n = 2;
+    const n = 509;
     return (
-        <div>
+        <div className='text-red-500'>
             Hello! {n}
         </div>
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const root = ReactDOM.hydrateRoot( // Updated method
+    document.getElementById('app'),
+    <StrictMode>
+        <App />
+    </StrictMode>
+);
